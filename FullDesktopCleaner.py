@@ -158,6 +158,7 @@ def filter_files(desktop_path):
                 else:
                     print(f'Skipped moving file(s): {f_name}')
             else:
+                f_name.startswith('Genvej', 'genvej', 'Shortcut', 'shortcut')
                 yes = input(f'Are you sure you want to move the file(s): {f_name}? (yes/no): ')
                 if yes.lower() in ['y', 'yes']:
                     shutil.move(f_path, f'{desktop_path}/Program Files')
